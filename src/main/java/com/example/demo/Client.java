@@ -18,8 +18,8 @@ public class Client {
             System.out.println("Informe qual figura você deseja calcular a area(Quadrado, triangulo, retangulo, circulo!");
             while(parametro != "") {
                 Scanner in = new Scanner(System.in);
-                parametro = in.nextLine();
-                
+                parametro = in.next();
+
                 switch(parametro) {
                     case "Quadrado":
                         inputA = in.nextInt();

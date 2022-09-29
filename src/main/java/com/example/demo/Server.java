@@ -18,14 +18,14 @@ public class Server extends UnicastRemoteObject implements AreaObj {
     @Override
     public double getRetangulo(int a, int b) throws RemoteException {
         System.out.println(" Calculando a area do Retangulo");
-        return (a * b)/2;
+        return a * b;
     }
 
     @Override
     public double getTriangulo(int a, int b, int c) throws RemoteException {
         System.out.println(" Calculando a area do Triângulo");
-        c = (a * b) / 2;
-        return c;
+        double result = (double) (a + b + c) / 2;
+        return Math.pow(result*(result-a)*(result-b)*(result-c), 0.5);
     }
 
     @Override
